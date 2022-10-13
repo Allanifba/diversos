@@ -1,0 +1,70 @@
+Option Explicit
+
+
+Private Sub CommandButton1_GotFocus()
+CommandButton1.Caption = "1" & vbNewLine & "ON"
+End Sub
+
+
+Private Sub CommandButton1_LostFocus()
+CommandButton1.Caption = "1" & vbNewLine & "OFF"
+End Sub
+
+
+Private Sub CommandButton1_KeyDown(ByVal KeyCode As MSForms.ReturnInteger, ByVal Shift As Integer)
+Dim personagem As Shape
+Set personagem = Shapes("personagem1")
+
+
+If KeyCode = vbKeyW Then
+personagem.Top = personagem.Top - 5
+
+ElseIf KeyCode = vbKeyS Then
+personagem.Top = personagem.Top + 5
+End If
+
+
+If KeyCode = vbKeyA Then
+personagem.Left = personagem.Left - 5
+
+ElseIf KeyCode = vbKeyD Then
+personagem.Left = personagem.Left + 5
+
+End If
+
+End Sub
+
+Private Sub CommandButton2_GotFocus()
+CommandButton2.Caption = "2" & vbNewLine & "ON"
+End Sub
+
+
+Private Sub CommandButton2_LostFocus()
+CommandButton2.Caption = "2" & vbNewLine & "OFF"
+End Sub
+
+
+Private Sub CommandButton2_KeyDown(ByVal KeyCode As MSForms.ReturnInteger, ByVal Shift As Integer)
+Dim personagem As Shape
+Set personagem = Shapes("personagem2")
+
+
+If KeyCode = vbKeyW Then
+personagem.Top = personagem.Top - 5
+
+ElseIf KeyCode = vbKeyS Then
+personagem.Top = personagem.Top + 5
+End If
+
+
+If KeyCode = vbKeyA Then
+personagem.Left = personagem.Left - 5
+
+ElseIf KeyCode = vbKeyD Then
+personagem.Left = personagem.Left + 5
+
+End If
+
+End Sub
+
+
